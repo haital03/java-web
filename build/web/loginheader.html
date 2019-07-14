@@ -1,0 +1,61 @@
+<style>
+.badge1 {
+   position:relative;
+}
+.badge1[data-badge]:after {
+   content:attr(data-badge);
+   position:absolute;
+   top:-10px;
+   right:-10px;
+   font-size:.7em;
+   background:green;
+   color:white;
+   width:18px;height:18px;
+   text-align:center;
+   line-height:18px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+}
+</style>
+<header class="header navbar-fixed-top" style="background : lavenderblush;width:100%">
+	<div class="navbar navbar-default main-menu">
+    <div class="container">
+            <div class="navbar-header" style="margin-left:-170px;">
+                    <a  href="" class="navbar-brand"><img src="assets/images/iconfinal.jpg" alt="Logo" /></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search" style="height:47px; line-height:45px;color:white;">
+                        <a href="" class="btn_search" style="height:46px; line-height:45px;"><i class="fa fa-search"></i></a>
+                        <a href="updateprofile.jsp"  class="btn_buy">Update</a>
+                        <a href="logout.jsp" class="btn_buy">Logout</a>
+                        <a href="" class="badge1" data-badge="27">Badge Notification Example</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
+</header>
+<!-- Side navigation -->
+<div class="sidebar">
+    <div style="padding-top: 120px;">
+    <b>
+     <!--   <a href="services.jsp" class="w3-bar-item w3-button w3-border-bottom">HOME</a>
+        <a href="samplepaper.jsp" class="w3-bar-item w3-button w3-border-bottom">SAMPLE PAPER</a>			
+        <a href="examupdates.jsp" class="w3-bar-item w3-button w3-border-bottom">EXAM UPDATES</a>
+        <a href="projects.jsp" class="w3-bar-item w3-button w3-border-bottom">PROJECTS</a>
+        <a href="notifications.jsp" class="w3-bar-item w3-button w3-border-bottom">NOTIFICATIONS</a>			
+        <a href="inbox.jsp" class="w3-bar-item w3-button w3-border-bottom">INBOX</a>
+        <a href="about.jsp" class="w3-bar-item w3-button w3-border-bottom">ABOUT</a> -->
+     
+        <a href="services.jsp">HOME</a>
+        <a href="samplepaper.jsp">SAMPLE PAPER</a>			
+        <a href="examupdates.jsp">EXAM UPDATES</a>
+        <a href="projects.jsp">PROJECTS</a>
+        <a href="notifications.jsp">NOTIFICATIONS</a>			
+        <a href="chatwalainbox.jsp">INBOX</a>
+        <a href="about.jsp">ABOUT</a>
+    </b>
+    </div>    
+</div>

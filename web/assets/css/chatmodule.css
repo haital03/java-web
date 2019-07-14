@@ -1,0 +1,84 @@
+.chatmodule
+{
+    margin-left: 14%;
+    width: 84%;
+    height: 100%;
+    border: 2px solid black;
+    
+}
+.chatleft
+{
+    margin-top: 80px;
+    float: right;
+    width: 15%;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    border: 2px solid black;
+    background-color: lightgrey; 
+}
+.chatleft img
+{
+    margin-left: 5px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    text-align: left;
+    border:3px solid #6B6F79;
+}
+.chatleftcontent
+{
+    height: auto;
+}
+.chatinbox
+{
+    width: 70%;
+    margin-left: 20%;
+    right:0;
+    height: 100%;
+    position: fixed;
+    background-color: lightblue;
+    border: 2px solid blue;
+    margin-top: 80px;
+    overflow: auto;
+}
+.chatinboxheader
+{
+    top:0;
+    border: 2px solid black;
+    text-align: center;
+    background-color: lightgray;
+}
+.rightside-left-chat,.rightside-right-chat{
+  float:left;
+  width:80%;
+  position: relative;
+}
+.rightside-right-chat{
+  float:right;
+  margin-right:35px;
+}
+.right-chat-textbox{
+  padding: 15px 30px;
+  width: 90%;
+  background-color: lightgrey;
+}
+.right-chat-textbox input{
+  width:90%;
+  height:40px;
+  color:black;
+  border-radius:5px;
+  padding: 0px 10px;
+  border:1px solid #c1c1c1;
+}
+.right-chat-textbox a i{
+  color:#3A3A3A;
+  text-align: center;
+  height:40px;
+  width:70px;
+  font-weight: bold;
+  background-color:#fff; 
+  border-radius: 20%;
+  padding:12px 0px;
+  margin-left:20px;
+}

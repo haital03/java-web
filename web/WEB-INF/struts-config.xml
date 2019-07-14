@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+    <form-beans>
+        <form-bean name="SignupForm" type="myforms.SignupForm"/>
+        <form-bean name="LoginForm" type="myforms.LoginForm"/>
+        <form-bean name="UpdateForm" type="myforms.UpdateForm"/>
+        <form-bean name="PostCommentForm" type="myforms.PostCommentForm"/>
+        <form-bean name="ForgotPasswordForm" type="myforms.ForgotPasswordForm"/>
+        <form-bean name="ContactForm" type="myforms.ContactForm"/>
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="signup"  path="/signup.do"/>
+    </global-forwards>
+    <action-mappings>
+        <action input="/signup.jsp" name="SignupForm" path="/signup" scope="session" type="myactions.SignupAction">
+            <forward name="index" path="/index.jsp"/>
+            <forward name="signup" path="/signup.jsp"/>
+            <forward name="failure" path="/failure.jsp"/>
+        </action>
+        <action input="/login.jsp" name="LoginForm" path="/login" scope="session" type="myactions.LoginAction">
+            <forward name="index" path="/index.jsp"/>
+            <forward name="services" path="/services.jsp"/>
+            <forward name="failure" path="/failure.jsp"/>
+        </action>
+        <action input="/updateprofile.jsp" name="UpdateForm" path="/update" scope="session" type="myactions.UpdateAction">
+            <forward name="update" path="/updateprofile.jsp"/>
+            <forward name="services" path="/services.jsp"/>
+            <forward name="failure" path="/failure.jsp"/>
+        </action>
+        <action input="/services.jsp" name="PostCommentForm" path="/postComment" scope="session" type="myactions.PostCommentAction">
+            <forward name="services" path="/services.jsp"/>
+            <forward name="failure" path="/failure.jsp"/>
+        </action>
+        <action input="/login.jsp" name="ForgotPasswordForm" path="/forgotPassword" scope="session" type="myactions.ForgotPasswordAction">
+            <forward name="success" path="/login.jsp"/>
+            <forward name="failure" path="/failure.jsp"/>
+        </action>
+        <action input="/contact.jsp" name="ContactForm" path="/contact" scope="session" type="myactions.ContactAction">
+            <forward name="success" path="/contact.jsp"/>
+            <forward name="failure" path="/failure.jsp"/>
+        </action>
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>
